@@ -26,7 +26,10 @@ function callBack(req, res) {
 };
 
 app.post('/save', function (req,res) {
-    projectData.castData = req.body.memberData;
-    console.log('post recieved');
+    projectData.nameOne = req.body.name;
+    projectData.birthdayOne = req.body.birthday;
+    projectData.countryOne = req.body.country;
+    projectData.imageOne = req.body.image;
+    console.log(req.body.country);
     res.end();
 });
